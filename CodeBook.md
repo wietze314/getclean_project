@@ -2,6 +2,12 @@
 Info of the data used in this project can be found here:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
+### Data collection summary
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+
+
 For info on data processing, read readme.md
 
 ### columns in dataframes 'combclean' and 'avgclean'
@@ -12,7 +18,16 @@ filtered columns in cleaned datasets used in this project and their description,
 * set : marks from which set the data is loaded (training or test set). This column is not in dataframe avgclean, since data is summarized over both data source sets
 
 #### the following column names are constructed from the features.txt file.
-These column names are stripped from special characters, but other than that were unchanged
+These column names are stripped from special characters, but other than that were unchanged, with the following naming conventions
+
+* Acc = Acceleration in g's (9.80665 m/seg2). Acceleration signal from the smartphone accelerometer.
+* Gyro = angular velocity vector measured by the gyroscope (radians/second)
+* X = X axis (for gyroscope measurements)
+* Y = Y axis (for gyroscope measurements)
+* Z = Z axis (for gyroscope measurements)
+* t (prefix) = time domain
+* f (prefix) = frequency domain
+
 * tBodyAcc_mean_X 
 * tBodyAcc_mean_Y 
 * tBodyAcc_mean_Z 

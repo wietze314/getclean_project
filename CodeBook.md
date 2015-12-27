@@ -12,6 +12,7 @@ For info on data processing, read readme.md
 
 ### columns in dataframes 'combclean' and 'avgclean'
 filtered columns in cleaned datasets used in this project and their description, if applicable.
+
 #### The following columns where not in the original data files:
 * activity : activity (factor)
 * subject : number identifying a subject
@@ -20,6 +21,7 @@ filtered columns in cleaned datasets used in this project and their description,
 #### the following column names are constructed from the features.txt file.
 These column names are stripped from special characters, but other than that were unchanged, with the following naming conventions
 
+##### Abbrivations
 * Acc = Acceleration in g's (9.80665 m/seg2). Acceleration signal from the smartphone accelerometer.
 * Gyro = angular velocity vector measured by the gyroscope (radians/second)
 * X = X axis (for gyroscope measurements)
@@ -28,6 +30,7 @@ These column names are stripped from special characters, but other than that wer
 * t (prefix) = time domain
 * f (prefix) = frequency domain
 
+##### Columns
 * tBodyAcc_mean_X 
 * tBodyAcc_mean_Y 
 * tBodyAcc_mean_Z 
